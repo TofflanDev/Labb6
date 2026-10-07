@@ -20,7 +20,10 @@ namespace Labb6
 
         }
 
-
+        public override string ToString()
+        {
+            return $"Employee: {myID}, {myName}, {myGender}, {mySalary} ";
+        }
 
     }
 }
