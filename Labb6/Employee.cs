@@ -8,22 +8,23 @@ namespace Labb6
     {
         private int myID;
         private string myName;
-        private string myGender;
+        public string Gender { get; }
         private double mySalary;
 
         public Employee(int aID, string aName, string aGender, double aSalary)
         {
             myID = aID;
             myName = aName;
-            myGender = aGender;
+            Gender = aGender;
             mySalary = aSalary;
 
         }
 
         public override string ToString()
         {
-            return $"Employee: {myID}, {myName}, {myGender}, {mySalary} ";
+            return $"Employee: {myID}, {myName}, {Gender}, {mySalary} ";
         }
+
 
     }
 }
