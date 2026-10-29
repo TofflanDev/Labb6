@@ -34,7 +34,7 @@ namespace Labb6
             }
 
             Console.WriteLine("------------");
-            StackDelen(employeeStack);
+            StackDelen(employeeStack,employee3);
 
             // DEL 2 /////////////////////////////////////////////////////////////////////
             List<Employee> employeesList = new List<Employee>();
@@ -73,7 +73,7 @@ namespace Labb6
 
 
         // STACK DELEN
-        public static void StackDelen(Stack<Employee> eList)
+        public static void StackDelen(Stack<Employee> eList,Employee objekt3)
         {
             //PART 1: Array copy - otherwise would crash because of dynamic container changing size while poping
             Employee[] copy = eList.ToArray();
@@ -104,7 +104,7 @@ namespace Labb6
             Console.WriteLine(eList.Peek());
             Console.WriteLine(eList.Count);
             //PART 4: Check if stack contains object number 3
-            if (eList.Count >= 3)
+            if (eList.Contains(objekt3))
             {
                 Console.WriteLine("Objekt nummer 3 finns i stacken!");
             }
